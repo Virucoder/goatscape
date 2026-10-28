@@ -10,13 +10,13 @@ Goatscape is a small 2D dungeon puzzle game where you play as a goat and try to 
 - Race against the timer
 - Windows and Web exports
 
-## 🛠️ Technologies
+## Technologies
 
 - **Godot Engine**
 - **GDScript**
 - **GitHub Pages** — Web version hosting
 
-## 🚀 Play the Game
+## Play the Game
 
 - **Web version:** [Play Goatscape](./docs/)
 - **Windows version:** See the [Releases](https://github.com/Virucoder/goatscape/releases/tag/v1.0.0) page.
