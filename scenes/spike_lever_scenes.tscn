@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://bayuk5rbx5gle"]
+
+[ext_resource type="PackedScene" uid="uid://c6yd7t6bl72yx" path="res://scenes/spikes.tscn" id="1_2e0qp"]
+[ext_resource type="PackedScene" uid="uid://bx22b0mn58hhp" path="res://scenes/lever.tscn" id="2_0vnun"]
+
+[sub_resource type="GDScript" id="GDScript_0vnun"]
+
+[node name="SpikeLeverScenes" type="Node2D" unique_id=5334003]
+
+[node name="Spikes1" type="Node2D" parent="." unique_id=1233472198]
+unique_name_in_owner = true
+
+[node name="spikes" parent="Spikes1" unique_id=742926061 instance=ExtResource("1_2e0qp")]
+position = Vector2(408, 88)
+
+[node name="spikes2" parent="Spikes1" unique_id=1662710298 instance=ExtResource("1_2e0qp")]
+position = Vector2(408, 104)
+
+[node name="spikes3" parent="Spikes1" unique_id=1845264701 instance=ExtResource("1_2e0qp")]
+position = Vector2(408, 120)
+
+[node name="spikes4" parent="Spikes1" unique_id=871555468 instance=ExtResource("1_2e0qp")]
+position = Vector2(424, 88)
+
+[node name="spikes5" parent="Spikes1" unique_id=40309133 instance=ExtResource("1_2e0qp")]
+position = Vector2(424, 120)
+
+[node name="spikes6" parent="Spikes1" unique_id=1758610945 instance=ExtResource("1_2e0qp")]
+position = Vector2(248, 296)
+start_on = false
+
+[node name="spikes7" parent="Spikes1" unique_id=696260427 instance=ExtResource("1_2e0qp")]
+position = Vector2(280, 296)
+start_on = false
+
+[node name="spikes8" parent="Spikes1" unique_id=698862132 instance=ExtResource("1_2e0qp")]
+position = Vector2(232, 296)
+start_on = false
+
+[node name="spikes9" parent="Spikes1" unique_id=575000949 instance=ExtResource("1_2e0qp")]
+position = Vector2(264, 296)
+start_on = false
+
+[node name="Spikes2" type="Node2D" parent="." unique_id=68891368]
+unique_name_in_owner = true
+
+[node name="spikes" parent="Spikes2" unique_id=1320471723 instance=ExtResource("1_2e0qp")]
+position = Vector2(392, 168)
+
+[node name="spikes2" parent="Spikes2" unique_id=144123528 instance=ExtResource("1_2e0qp")]
+position = Vector2(264, 280)
+start_on = false
+
+[node name="spikes3" parent="Spikes2" unique_id=700366645 instance=ExtResource("1_2e0qp")]
+position = Vector2(232, 264)
+start_on = false
+
+[node name="spikes4" parent="Spikes2" unique_id=1978445251 instance=ExtResource("1_2e0qp")]
+position = Vector2(248, 280)
+start_on = false
+
+[node name="spikes5" parent="Spikes2" unique_id=2104257991 instance=ExtResource("1_2e0qp")]
+position = Vector2(280, 264)
+start_on = false
+
+[node name="spikes6" parent="Spikes2" unique_id=1418231233 instance=ExtResource("1_2e0qp")]
+position = Vector2(248, 248)
+start_on = false
+
+[node name="spikes7" parent="Spikes2" unique_id=178835568 instance=ExtResource("1_2e0qp")]
+position = Vector2(264, 248)
+start_on = false
+
+[node name="Spikes3" type="Node2D" parent="." unique_id=383268378]
+unique_name_in_owner = true
+
+[node name="spikes" parent="Spikes3" unique_id=1432457513 instance=ExtResource("1_2e0qp")]
+position = Vector2(280, 184)
+
+[node name="spikes2" parent="Spikes3" unique_id=94747604 instance=ExtResource("1_2e0qp")]
+position = Vector2(248, 184)
+
+[node name="spikes3" parent="Spikes3" unique_id=873230557 instance=ExtResource("1_2e0qp")]
+position = Vector2(232, 184)
+
+[node name="spikes4" parent="Spikes3" unique_id=1355150643 instance=ExtResource("1_2e0qp")]
+position = Vector2(264, 184)
+
+[node name="Spikes4" type="Node2D" parent="." unique_id=730151254]
+unique_name_in_owner = true
+
+[node name="spikes" parent="Spikes4" unique_id=589033783 instance=ExtResource("1_2e0qp")]
+position = Vector2(232, 232)
+
+[node name="spikes2" parent="Spikes4" unique_id=1312094603 instance=ExtResource("1_2e0qp")]
+position = Vector2(264, 216)
+
+[node name="spikes3" parent="Spikes4" unique_id=1817368650 instance=ExtResource("1_2e0qp")]
+position = Vector2(232, 200)
+
+[node name="spikes4" parent="Spikes4" unique_id=664391454 instance=ExtResource("1_2e0qp")]
+position = Vector2(280, 200)
+
+[node name="spikes5" parent="Spikes4" unique_id=1265134992 instance=ExtResource("1_2e0qp")]
+position = Vector2(280, 232)
+
+[node name="spikes6" parent="Spikes4" unique_id=1734804070 instance=ExtResource("1_2e0qp")]
+position = Vector2(248, 216)
+
+[node name="LeverMenager" type="Node2D" parent="." unique_id=276454469]
+script = SubResource("GDScript_0vnun")
+
+[node name="Lever" parent="LeverMenager" unique_id=1671427562 node_paths=PackedStringArray("spikes") instance=ExtResource("2_0vnun")]
+position = Vector2(233, 35)
+spikes = [NodePath("../../Spikes1")]
+
+[node name="Lever2" parent="LeverMenager" unique_id=252762923 node_paths=PackedStringArray("spikes") instance=ExtResource("2_0vnun")]
+position = Vector2(425, 97)
+spikes = [NodePath("../../Spikes2")]
+
+[node name="Lever3" parent="LeverMenager" unique_id=1367058026 node_paths=PackedStringArray("spikes") instance=ExtResource("2_0vnun")]
+position = Vector2(407, 161)
+spikes = [NodePath("../../Spikes3")]
+
+[node name="Lever4" parent="LeverMenager" unique_id=178085119 node_paths=PackedStringArray("spikes") instance=ExtResource("2_0vnun")]
+position = Vector2(260, 199)
+spikes = [NodePath("../../Spikes4")]

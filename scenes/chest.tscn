@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bwm0bc3iv7hhe"]
+
+[ext_resource type="Texture2D" uid="uid://dlhhsvgd4myo4" path="res://assets/Tileset.png" id="1_sy5e1"]
+[ext_resource type="PackedScene" uid="uid://bshxl30uxtkli" path="res://scenes/interation.tscn" id="2_gqd3d"]
+[ext_resource type="Script" uid="uid://bojegk3i2me46" path="res://scenes/chest.gd" id="2_yue2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8di2w"]
+size = Vector2(18, 14)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e87eo"]
+radius = 4.0
+height = 14.0
+
+[node name="Chest" type="Sprite2D" unique_id=1671427562]
+texture = ExtResource("1_sy5e1")
+hframes = 7
+vframes = 6
+frame = 21
+script = ExtResource("2_yue2o")
+
+[node name="Interation" parent="." unique_id=18639072 instance=ExtResource("2_gqd3d")]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Interation" index="0" unique_id=1591975168]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_8di2w")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1421282154]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1096895079]
+position = Vector2(0, 2)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_e87eo")
+
+[editable path="Interation"]

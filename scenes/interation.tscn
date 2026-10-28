@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bshxl30uxtkli"]
+
+[ext_resource type="Script" uid="uid://ytb406nsdj3" path="res://scenes/interation.gd" id="1_wpy2k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qytcv"]
+
+[node name="Interation" type="Area2D" unique_id=18639072]
+script = ExtResource("1_wpy2k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1591975168]
+shape = SubResource("RectangleShape2D_qytcv")
+
+[node name="Label" type="Label" parent="." unique_id=23612296]
+visible = false
+modulate = Color(0.96862745, 0.46666667, 0, 0.7647059)
+offset_left = -19.0
+offset_top = -29.0
+offset_right = 21.0
+offset_bottom = -6.0
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

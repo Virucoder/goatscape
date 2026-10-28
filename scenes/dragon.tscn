@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://s2cl7fpe707a"]
+
+[ext_resource type="Script" uid="uid://bjfuqm62flhxc" path="res://scenes/dragon.gd" id="1_lmr38"]
+[ext_resource type="Texture2D" uid="uid://bcpfuuel80uqw" path="res://assets/sleepDragonGif.png" id="2_7fr0w"]
+[ext_resource type="Texture2D" uid="uid://f0yvny8xwd2m" path="res://assets/wakeUpDragonGif.png" id="3_kcfnc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7tnmt"]
+radius = 24.0
+height = 78.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y46cm"]
+atlas = ExtResource("2_7fr0w")
+region = Rect2(0, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yk6i"]
+atlas = ExtResource("2_7fr0w")
+region = Rect2(0, 80, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe7o6"]
+atlas = ExtResource("2_7fr0w")
+region = Rect2(0, 160, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn7pc"]
+atlas = ExtResource("2_7fr0w")
+region = Rect2(0, 240, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kr2gv"]
+atlas = ExtResource("2_7fr0w")
+region = Rect2(0, 320, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el11r"]
+atlas = ExtResource("3_kcfnc")
+region = Rect2(0, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atspo"]
+atlas = ExtResource("3_kcfnc")
+region = Rect2(0, 80, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2kfc"]
+atlas = ExtResource("3_kcfnc")
+region = Rect2(0, 160, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u8im"]
+atlas = ExtResource("3_kcfnc")
+region = Rect2(0, 240, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kld06"]
+atlas = ExtResource("3_kcfnc")
+region = Rect2(0, 320, 96, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qytcv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y46cm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yk6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fe7o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn7pc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kr2gv")
+}],
+"loop": 1,
+"name": &"sleep",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_el11r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atspo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2kfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u8im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kld06")
+}],
+"loop": 1,
+"name": &"wakey",
+"speed": 3.0
+}]
+
+[node name="dragon" type="StaticBody2D" unique_id=1923346671]
+script = ExtResource("1_lmr38")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=485870960]
+position = Vector2(1, 9)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_7tnmt")
+
+[node name="SleepingDragon" type="AnimatedSprite2D" parent="." unique_id=1953881940]
+sprite_frames = SubResource("SpriteFrames_qytcv")
+animation = &"wakey"
+frame_progress = 0.71179223

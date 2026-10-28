@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://v5pggxhdkyok"]
+
+[ext_resource type="Texture2D" uid="uid://dlhhsvgd4myo4" path="res://assets/Tileset.png" id="1_uvdjg"]
+[ext_resource type="Script" uid="uid://5uuoes7wtg0m" path="res://scenes/door.gd" id="2_83dcw"]
+[ext_resource type="PackedScene" uid="uid://bshxl30uxtkli" path="res://scenes/interation.tscn" id="3_83dcw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qytcv"]
+size = Vector2(16, 16)
+
+[node name="door" type="Sprite2D" unique_id=742926061]
+texture = ExtResource("1_uvdjg")
+hframes = 7
+vframes = 6
+frame = 14
+script = ExtResource("2_83dcw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2054621080]
+
+[node name="DoorColision" type="CollisionShape2D" parent="StaticBody2D" unique_id=264841091]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_qytcv")
+
+[node name="Interation" parent="." unique_id=18639072 instance=ExtResource("3_83dcw")]
+
+[editable path="Interation"]
