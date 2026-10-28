@@ -18,21 +18,15 @@ Goatscape is a small 2D dungeon puzzle game where you play as a goat and try to 
 
 ## Play the Game
 
-- **Web version:** [Play Goatscape](./docs/)
+- **Web version:** [Play Goatscape](https://virucoder.github.io/goatscape/)
 - **Windows version:** See the [Releases](https://github.com/Virucoder/goatscape/releases/tag/v1.0.0) page.
 
 > Note: The Web version is available once GitHub Pages is configured correctly.
 
 ## 📸 Screenshots
 
-Add screenshots of the game here.
-
-Example:
-
-```markdown
-![Gameplay](screenshots/gameplay.png)
-![Dungeon](screenshots/dungeon.png)
-```
+<img width="602" height="640" alt="Zrzut ekranu 2026-10-28 141329" src="https://github.com/user-attachments/assets/556051ac-9725-4b3c-89c8-65c59a8729a2" />
+<img width="601" height="629" alt="Zrzut ekranu 2026-10-28 141400" src="https://github.com/user-attachments/assets/b65ddf29-36c4-49f7-a03a-6bf9e21d7316" />
 
 ## Project Structure
 
